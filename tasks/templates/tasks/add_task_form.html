@@ -1,0 +1,16 @@
+{% include 'tasks/navbar.html' %}
+
+{% block content %}
+
+<title>Add Task</title>
+
+
+<form method="POST">
+    <div class="form-group">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <input class="btn btn-info" type="submit" name="Create Task">
+    </div>
+</form>
+{% endblock %}
